@@ -1,32 +1,15 @@
 {
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
     "target": "ES2022",
-    "lib": ["ES2023"],
+    "lib": ["ES2023", "DOM"],
     "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
     "skipLibCheck": true,
     "types": ["jest", "@testing-library/jest-dom"],
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-
-    /* Linting */
     "strict": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUnusedParameters": true
   },
-  "include": [
-    "vite.config.ts",
-    "src",                       // Include source code
-    "src/**/*.test.ts",          // Include test files
-    "src/**/*.test.tsx",         // Include test files for React
-    "jest.setup.ts"              // Include the jest-dom setup file
-  ]
+  "include": ["src", "vite.config.ts"]
 }
