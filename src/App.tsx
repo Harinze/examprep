@@ -16,17 +16,19 @@ function App() {
     <Router>
       <QuestionProvider>
         <Navbar />
-        <main className="min-h-screen bg-white text-black px-4 py-6">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/kcna-exam" element={<Exam />} />
-            <Route path="/react-prep" element={<FrontendPrep />} />
-            <Route path="/mini-websocket-prep" element={<MiniWebsocket />} />
-            <Route path="/rest-prep" element={<RestPrep />} />
-            <Route path="/rtl-prep" element={<RTL />} />
-            <Route path="/spa-prep" element={<SPAPrep />} />
-            <Route path="/web-security" element={<WebSecurity />} />
-          </Routes>
+        <main className="min-h-screen bg-white text-black px-4 sm:px-6 md:px-8 lg:px-10 py-6">
+          <div className="max-w-7xl mx-auto w-full">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/kcna-exam" element={<Exam />} />
+              <Route path="/react-prep" element={<FrontendPrep />} />
+              <Route path="/mini-websocket-prep" element={<MiniWebsocket />} />
+              <Route path="/rest-prep" element={<RestPrep />} />
+              <Route path="/rtl-prep" element={<RTL />} />
+              <Route path="/spa-prep" element={<SPAPrep />} />
+              <Route path="/web-security" element={<WebSecurity />} />
+            </Routes>
+          </div>
         </main>
         <Footer />
       </QuestionProvider>
