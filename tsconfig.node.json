@@ -5,6 +5,7 @@
     "lib": ["ES2023"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "types": ["jest", "@testing-library/jest-dom"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -21,5 +22,11 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["vite.config.ts"]
+  "include": [
+    "vite.config.ts",
+    "src",                       // Include source code
+    "src/**/*.test.ts",          // Include test files
+    "src/**/*.test.tsx",         // Include test files for React
+    "jest.setup.ts"              // Include the jest-dom setup file
+  ]
 }

@@ -3,24 +3,32 @@ import Home from "./components/Home";
 import Exam from "./components/Exam"; 
 import FrontendPrep from "./components/FrontendPrep";
 import MiniWebsocket from "./components/MiniWebsocket";
-import { QuestionProvider } from "../src/context/RestQuestionContext"; 
+import { QuestionProvider } from "./context/RestQuestionContext"; 
 import RestPrep from "./components/RestPrep";
 import RTL from "./components/RTL";
 import SPAPrep from "./components/SPA";
+import WebSecurity from "./components/WebSecurity";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <Router>
       <QuestionProvider>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/kcna-exam" element={<Exam />} />
-          <Route path="/react-prep" element={<FrontendPrep />} />
-          <Route path="/mini-websocket-prep" element={<MiniWebsocket />} />
-          <Route path="/rest-prep" element={<RestPrep />} />
-           <Route path="/rtl" element={<RTL />} />
-            <Route path="/rtl" element={<SPAPrep />} />
-        </Routes>
+        <Navbar />
+        <main className="min-h-screen bg-white text-black px-4 py-6">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/kcna-exam" element={<Exam />} />
+            <Route path="/react-prep" element={<FrontendPrep />} />
+            <Route path="/mini-websocket-prep" element={<MiniWebsocket />} />
+            <Route path="/rest-prep" element={<RestPrep />} />
+            <Route path="/rtl-prep" element={<RTL />} />
+            <Route path="/spa-prep" element={<SPAPrep />} />
+            <Route path="/web-security" element={<WebSecurity />} />
+          </Routes>
+        </main>
+        <Footer />
       </QuestionProvider>
     </Router>
   );

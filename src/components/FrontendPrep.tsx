@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { questions } from "../data/frontend";
 import { QuestionCard, type Question } from "../components/QuestionsCard";
 import { Link } from "react-router-dom";
+import ResetButton from "./ResetButton";
 
 const TOTAL = 100;
 const WIN_SCORE = 80;
@@ -80,9 +81,12 @@ const FrontendPrep: React.FC = () => {
         </div>
 
         <div className="bg-white p-4 rounded-xl shadow">
-          <p className="text-lg">
-            Score: <strong>{score} / {TOTAL}</strong>
-          </p>
+          <div className="bg-white p-4 rounded-xl shadow flex justify-between items-center">
+        <p className="text-lg">
+        Score: <strong>{score} / {TOTAL}</strong>
+        </p>
+     <ResetButton onReset={restart} />
+   </div>
           {score >= WIN_SCORE && (
             <p className="text-green-700 font-semibold mt-1">🎉 Certified Graduate!</p>
           )}

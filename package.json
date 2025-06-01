@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "jest",
+    "test:logic": "jest RestPrep.logic.test.ts",
+    "test:ui": "jest RestPrep.ui.test.tsx"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.8",
