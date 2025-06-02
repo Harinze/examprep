@@ -1,54 +1,95 @@
-# React + TypeScript + Vite
+ Interview Exam Prep
+A responsive web app designed to help developers prepare for technical interviews in React.js, Next.js, REST APIs, WebSockets, Browser Security, RTL, Single Page Applications (SPA), and KCNA (Kubernetes and Cloud Native Associate).
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ Practice. Learn. Certify.
 
-Currently, two official plugins are available:
+ Live Demo
+Coming soon or hosted on: your-demo-link.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+ Features
+ MCQ-based exam mode for each topic
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+ Instant feedback on answers
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+ Score tracking and certification-like result feedback
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+ Fully responsive UI for mobile and desktop
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+ Categorized topics with dedicated prep sections
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+ State management using React Context API
+
+ Covers critical areas like web security and auth flows
+
+ Topics Covered
+ KCNA (Kubernetes)
+
+ React.js
+
+ Next.js
+
+ REST APIs (versioning, performance, error handling)
+
+ WebSockets (handshakes, protocols, scalability)
+
+ Browser Security (CSP, XSS, Cookies, OAuth2)
+
+ RTL (React Testing Library)
+
+ SPA concepts
+
+
+ Tech Stack
+ React + TypeScript
+
+ React Router DOM
+
+ Tailwind CSS
+
+ Vite (for fast development)
+
+ Responsive Design (mobile-first)
+
+ Jest + RTL (for testing readiness)
+
+🛠️ Getting Started
+Clone and run locally:
+
+git clone https://github.com/Harinze/examprep.git
+cd interview-exam-prep
+npm install
+npm run dev
+Visit http://localhost:5173
+
+📏 Mobile Responsiveness
+Tailwind’s utility-first classes ensure pixel-perfect responsiveness.
+
+Navbar collapses into a mobile-friendly menu.
+
+Layouts auto-adjust to screen sizes (iPhone SE → Desktop).
+
+✅ To Do
+ Add backend API support
+
+ Enable user authentication & score persistence
+
+ Add leaderboard and history view
+
+ Export questions to JSON/PDF
+
+🤝 Contributing
+Pull requests and issues are welcome!
+
+bash
+Copy
+Edit
+# Create a feature branch
+git checkout -b feature/my-feature
+🧑‍💻 Author
+[Kingsley Ibe]
+Frontend Engineer | Cloud Native Certified
+📫 kingsleyibe66@gmail.com
+
+📄 License
+MIT License © [Year] [Your Name]
