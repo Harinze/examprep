@@ -99,7 +99,7 @@ const SPAPrep: React.FC = () => {
             </h2>
             <p className="text-lg">Final Score: {score} / {TOTAL}</p>
             {score < WIN_SCORE && (
-              <p className="text-red-700 font-medium">Try again to score 80+ to pass.</p>
+              <p className="text-red-700 font-medium">Try again to score {WIN_SCORE}+ to pass.</p>
             )}
             <div className="flex justify-center gap-4">
               <button onClick={restart} className="bg-black text-white px-4 py-2 rounded-lg hover:bg-opacity-80">
