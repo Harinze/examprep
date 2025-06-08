@@ -10,6 +10,7 @@ import SPAPrep from "./components/SPA";
 import WebSecurity from "./components/WebSecurity";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import KCNA138 from "./components/KCNA-138";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               <Route path="/rtl-prep" element={<RTL />} />
               <Route path="/spa-prep" element={<SPAPrep />} />
               <Route path="/web-security" element={<WebSecurity />} />
+              <Route path="/kcna-138" element={<KCNA138 />} />
             </Routes>
           </div>
         </main>

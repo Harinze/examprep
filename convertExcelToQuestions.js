@@ -1,7 +1,7 @@
 import XLSX from 'xlsx';
 import fs from 'fs';
 
-const workbook = XLSX.readFile('KCNA-Exam-Question-Dump.xlsx');
+const workbook = XLSX.readFile('kcna-138.xlsx');
 const sheetName = workbook.SheetNames[0];
 const worksheet = workbook.Sheets[sheetName];
 
@@ -31,5 +31,5 @@ const output = `
 export const questions = ${JSON.stringify(questions, null, 2)};
 `;
 
-fs.writeFileSync('kcna-questions.js', output);
+fs.writeFileSync('kcna-questions-138.js', output);
 console.log('✅ questions.js generated successfully!');

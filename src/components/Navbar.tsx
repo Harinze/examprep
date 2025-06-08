@@ -47,6 +47,9 @@ const Navbar = () => {
           <Link to="/spa-prep" className="hover:text-white">
             SPA
           </Link>
+           <Link to="/kcna-138" className="hover:text-white">
+            KCNA 138
+          </Link>
           <Link to="/web-security" className="hover:text-white">
             Security
           </Link>
