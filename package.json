@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "ngx":"sudo cp -r ./dist/* /var/www/examprep/src/dist",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "jest",
