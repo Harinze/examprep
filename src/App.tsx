@@ -1,16 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
-import Exam from "./components/Exam"; 
+import Exam from "./components/questions/Exam"; 
 import FrontendPrep from "./components/FrontendPrep";
-import MiniWebsocket from "./components/MiniWebsocket";
+import MiniWebsocket from "./components/questions/MiniWebsocket";
 import { QuestionProvider } from "./context/RestQuestionContext"; 
-import RestPrep from "./components/RestPrep";
-import RTL from "./components/RTL";
-import SPAPrep from "./components/SPA";
-import WebSecurity from "./components/WebSecurity";
+import RestPrep from "./components/questions/RestPrep";
+import RTL from "./components/questions/RTL";
+import SPAPrep from "./components/questions/SPA";
+import WebSecurity from "./components/questions/WebSecurity";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import KCNA138 from "./components/KCNA-138";
+import KCNA138 from "./components/questions/KCNA-138";
 
 function App() {
   return (

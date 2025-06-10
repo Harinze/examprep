@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { questions } from "../data/kcna-138";
-import { QuestionCard, type Question } from "../components/QuestionsCard";
+import { questions } from "../../data/kcna-138";
+import { QuestionCard, type Question } from "./QuestionsCard";
 import { Link } from "react-router-dom";
-import ResetButton from "./ResetButton";
+import ResetButton from "../ResetButton";
 
 const TOTAL = 20;
 const WIN_SCORE = 17;

@@ -3,7 +3,7 @@ import bcrypt from 'bcrypt';
 import validator from 'validator';
 import User from '../models/user';
 
-// Register
+// === USER REGISTRATION
 export const createUser = async (req: Request, res: Response): Promise<void> => {
   try {
     const { fullName, email, phone, password, role } = req.body;
@@ -41,7 +41,7 @@ export const createUser = async (req: Request, res: Response): Promise<void> => 
   }
 };
 
-// Login
+// === USER LOGIN
 export const loginUser = async (req: Request, res: Response): Promise<void> => {
   try {
     const { email, password } = req.body;
@@ -73,7 +73,7 @@ export const loginUser = async (req: Request, res: Response): Promise<void> => {
   }
 };
 
-// Get all users
+// GET ALL USERS
 export const getAllUsers = async (_req: Request, res: Response): Promise<void> => {
   try {
     const users = await User.find().select('-password');

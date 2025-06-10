@@ -1,8 +1,8 @@
+import { useQuestionContext } from "../../context/RestQuestionContext"
 import React, { useEffect, useState } from "react";
-import { data } from "../data/websecurity";
-import { QuestionCard, type Question } from "../components/QuestionsCard";
+import { QuestionCard, type Question } from "./QuestionsCard";
 import { Link } from "react-router-dom";
-import ResetButton from "./ResetButton";
+import ResetButton from "../ResetButton";
 
 const TOTAL = 20;
 const WIN_SCORE = 17;
@@ -13,7 +13,8 @@ const getLocalData = () => {
   return { answered, score };
 };
 
-const WebSecurity: React.FC = () => {
+const RestPrep: React.FC = () => {
+  const { questions } = useQuestionContext();
   const [answered, setAnswered] = useState<number[]>([]);
   const [score, setScore] = useState<number>(0);
   const [current, setCurrent] = useState<Question | null>(null);
@@ -29,7 +30,7 @@ const WebSecurity: React.FC = () => {
   }, []);
 
   const pickQuestion = (answeredIds: number[]) => {
-    const pool = data.filter(q => !answeredIds.includes(q.id));
+    const pool = questions.filter(q => !answeredIds.includes(q.id));
     if (pool.length === 0 || answeredIds.length >= TOTAL) {
       setFinished(true);
       setCurrent(null);
@@ -76,12 +77,12 @@ const WebSecurity: React.FC = () => {
     <div className="min-h-screen bg-gray-100 p-6 text-black">
       <div className="max-w-2xl mx-auto space-y-6">
         <div className="flex justify-between items-center">
-          <h1 className="text-3xl font-extrabold">Web Security Exam Prep</h1>
+          <h1 className="text-3xl font-extrabold">RESTful Exam Prep</h1>
           <Link to="/" className="underline font-semibold">Home</Link>
         </div>
 
         <div className="bg-white p-4 rounded-xl shadow">
-         <div className="bg-white p-4 rounded-xl shadow flex justify-between items-center">
+          <div className="bg-white p-4 rounded-xl shadow flex justify-between items-center">
   <p className="text-lg">
     Score: <strong>{score} / {TOTAL}</strong>
   </p>
@@ -139,4 +140,4 @@ const WebSecurity: React.FC = () => {
   );
 };
 
-export default WebSecurity;
+export default RestPrep;
