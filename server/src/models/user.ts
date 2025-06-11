@@ -10,6 +10,8 @@ export interface IUser extends Document {
   country?: string;
   scholarship?: boolean;
   certNumber?: string;
+  isLoggedIn?: boolean;
+  isEmailVerified?: boolean;
   
 }
 
@@ -23,6 +25,8 @@ const UserSchema = new Schema<IUser>({
   country:  { type: String },
   scholarship: { type: Boolean, default: false },
   certNumber:  { type: String },
+  isEmailVerified: { type: Boolean, default: false },
+  isLoggedIn: { type: Boolean, default: false },
 });
 
 const User = mongoose.model<IUser>('User', UserSchema);

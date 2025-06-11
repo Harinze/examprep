@@ -6,6 +6,9 @@ import { verifyFirebaseToken } from './middleware/authMiddleware';
 
 const app = express();
 
+// Database
+connectDB();
+
 // Middleware
 app.use(cors());
 app.use(express.json());
@@ -24,8 +27,6 @@ app.get('/', (_req, res) => {
   });
 });
 
-// Database
-connectDB();
 
 // Server
 app.listen(3001, () => {
